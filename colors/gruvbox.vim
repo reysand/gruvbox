@@ -20,7 +20,7 @@ endif
 
 g:colors_name = 'gruvbox'
 
-if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
+if !(has('termguicolors') && &termguicolors) && !has('gui_running') && 256 != 256 #&t_Co != 256
   finish
 endif
 
