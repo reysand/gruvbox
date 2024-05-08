@@ -170,65 +170,65 @@ var none = ['NONE', 'NONE']
 
 # determine relative colors
 if is_dark
-  var bg0  = s:gb.dark0
+  var bg0  = gb.dark0
   if g:gruvbox_contrast_dark == 'soft'
-    var bg0  = s:gb.dark0_soft
+    bg0  = gb.dark0_soft
   elseif g:gruvbox_contrast_dark == 'hard'
-    var bg0  = s:gb.dark0_hard
+    bg0  = gb.dark0_hard
   endif
 
-  var bg1  = s:gb.dark1
-  var bg2  = s:gb.dark2
-  var bg3  = s:gb.dark3
-  var bg4  = s:gb.dark4
+  var bg1  = gb.dark1
+  var bg2  = gb.dark2
+  var bg3  = gb.dark3
+  var bg4  = gb.dark4
 
-  var gray = s:gb.gray_245
+  var gray = gb.gray_245
 
-  var fg0 = s:gb.light0
-  var fg1 = s:gb.light1
-  var fg2 = s:gb.light2
-  var fg3 = s:gb.light3
-  var fg4 = s:gb.light4
+  var fg0 = gb.light0
+  var fg1 = gb.light1
+  var fg2 = gb.light2
+  var fg3 = gb.light3
+  var fg4 = gb.light4
 
-  var fg4_256 = s:gb.light4_256
+  var fg4_256 = gb.light4_256
 
-  var red    = s:gb.bright_red
-  var green  = s:gb.bright_green
-  var yellow = s:gb.bright_yellow
-  var blue   = s:gb.bright_blue
-  var purple = s:gb.bright_purple
-  var aqua   = s:gb.bright_aqua
-  var orange = s:gb.bright_orange
+  var red    = gb.bright_red
+  var green  = gb.bright_green
+  var yellow = gb.bright_yellow
+  var blue   = gb.bright_blue
+  var purple = gb.bright_purple
+  var aqua   = gb.bright_aqua
+  var orange = gb.bright_orange
 else
-  var bg0  = s:gb.light0
+  var bg0  = gb.light0
   if g:gruvbox_contrast_light == 'soft'
-    var bg0  = s:gb.light0_soft
+    bg0  = gb.light0_soft
   elseif g:gruvbox_contrast_light == 'hard'
-    var bg0  = s:gb.light0_hard
+    bg0  = gb.light0_hard
   endif
 
-  var bg1  = s:gb.light1
-  var bg2  = s:gb.light2
-  var bg3  = s:gb.light3
-  var bg4  = s:gb.light4
+  var bg1  = gb.light1
+  var bg2  = gb.light2
+  var bg3  = gb.light3
+  var bg4  = gb.light4
 
-  var gray = s:gb.gray_244
+  var gray = gb.gray_244
 
-  var fg0 = s:gb.dark0
-  var fg1 = s:gb.dark1
-  var fg2 = s:gb.dark2
-  var fg3 = s:gb.dark3
-  var fg4 = s:gb.dark4
+  var fg0 = gb.dark0
+  var fg1 = gb.dark1
+  var fg2 = gb.dark2
+  var fg3 = gb.dark3
+  var fg4 = gb.dark4
 
-  var fg4_256 = s:gb.dark4_256
+  var fg4_256 = gb.dark4_256
 
-  var red    = s:gb.faded_red
-  var green  = s:gb.faded_green
-  var yellow = s:gb.faded_yellow
-  var blue   = s:gb.faded_blue
-  var purple = s:gb.faded_purple
-  var aqua   = s:gb.faded_aqua
-  var orange = s:gb.faded_orange
+  var red    = gb.faded_red
+  var green  = gb.faded_green
+  var yellow = gb.faded_yellow
+  var blue   = gb.faded_blue
+  var purple = gb.faded_purple
+  var aqua   = gb.faded_aqua
+  var orange = gb.faded_orange
 endif
 
 # reset to 16 colors fallback
@@ -246,77 +246,77 @@ if g:gruvbox_termcolors == 16
 endif
 
 # save current relative colors back to pavarte dictionary
-var gb.bg0 = s:bg0
-var gb.bg1 = s:bg1
-var gb.bg2 = s:bg2
-var gb.bg3 = s:bg3
-var gb.bg4 = s:bg4
+var gb.bg0 = bg0
+var gb.bg1 = bg1
+var gb.bg2 = bg2
+var gb.bg3 = bg3
+var gb.bg4 = bg4
 
-var gb.gray = s:gray
+var gb.gray = gray
 
-var gb.fg0 = s:fg0
-var gb.fg1 = s:fg1
-var gb.fg2 = s:fg2
-var gb.fg3 = s:fg3
-var gb.fg4 = s:fg4
+var gb.fg0 = fg0
+var gb.fg1 = fg1
+var gb.fg2 = fg2
+var gb.fg3 = fg3
+var gb.fg4 = fg4
 
-var gb.fg4_256 = s:fg4_256
+var gb.fg4_256 = fg4_256
 
-var gb.red    = s:red
-var gb.green  = s:green
-var gb.yellow = s:yellow
-var gb.blue   = s:blue
-var gb.purple = s:purple
-var gb.aqua   = s:aqua
-var gb.orange = s:orange
+var gb.red    = red
+var gb.green  = green
+var gb.yellow = yellow
+var gb.blue   = blue
+var gb.purple = purple
+var gb.aqua   = aqua
+var gb.orange = orange
 
 # }}}
 # Setup Terminal Colors For Neovim: {{{
 
 if has('nvim')
-  g:terminal_color_0 = s:bg0[0]
-  g:terminal_color_8 = s:gray[0]
+  g:terminal_color_0 = bg0[0]
+  g:terminal_color_8 = gray[0]
 
-  g:terminal_color_1 = s:gb.neutral_red[0]
-  g:terminal_color_9 = s:red[0]
+  g:terminal_color_1 = gb.neutral_red[0]
+  g:terminal_color_9 = red[0]
 
-  g:terminal_color_2 = s:gb.neutral_green[0]
-  g:terminal_color_10 = s:green[0]
+  g:terminal_color_2 = gb.neutral_green[0]
+  g:terminal_color_10 = green[0]
 
-  g:terminal_color_3 = s:gb.neutral_yellow[0]
-  g:terminal_color_11 = s:yellow[0]
+  g:terminal_color_3 = gb.neutral_yellow[0]
+  g:terminal_color_11 = yellow[0]
 
-  g:terminal_color_4 = s:gb.neutral_blue[0]
-  g:terminal_color_12 = s:blue[0]
+  g:terminal_color_4 = gb.neutral_blue[0]
+  g:terminal_color_12 = blue[0]
 
-  g:terminal_color_5 = s:gb.neutral_purple[0]
-  g:terminal_color_13 = s:purple[0]
+  g:terminal_color_5 = gb.neutral_purple[0]
+  g:terminal_color_13 = purple[0]
 
-  g:terminal_color_6 = s:gb.neutral_aqua[0]
-  g:terminal_color_14 = s:aqua[0]
+  g:terminal_color_6 = gb.neutral_aqua[0]
+  g:terminal_color_14 = aqua[0]
 
-  g:terminal_color_7 = s:fg4[0]
-  g:terminal_color_15 = s:fg1[0]
+  g:terminal_color_7 = fg4[0]
+  g:terminal_color_15 = fg1[0]
 endif
 
 # }}}
 # Overload Setting: {{{
 
-var hls_cursor = s:orange
+var hls_cursor = orange
 if exists('g:gruvbox_hls_cursor')
   var hls_cursor = get(s:gb, g:gruvbox_hls_cursor)
 endif
 
-var number_column = s:none
+var number_column = none
 if exists('g:gruvbox_number_column')
   var number_column = get(s:gb, g:gruvbox_number_column)
 endif
 
-var sign_column = s:bg1
+var sign_column = bg1
 
 if exists('g:gitgutter_override_sign_column_highlight') &&
       \ g:gitgutter_override_sign_column_highlight == 1
-  var sign_column = s:number_column
+  var sign_column = number_column
 else
   g:gitgutter_override_sign_column_highlight = 0
 
@@ -325,12 +325,12 @@ else
   endif
 endif
 
-var color_column = s:bg1
+var color_column = bg1
 if exists('g:gruvbox_color_column')
   var color_column = get(s:gb, g:gruvbox_color_column)
 endif
 
-var vert_split = s:bg0
+var vert_split = bg0
 if exists('g:gruvbox_vert_split')
   var vert_split = get(s:gb, g:gruvbox_vert_split)
 endif
@@ -338,11 +338,11 @@ endif
 var invert_signs = ''
 if exists('g:gruvbox_invert_signs')
   if g:gruvbox_invert_signs == 1
-    var invert_signs = s:inverse
+    var invert_signs = inverse
   endif
 endif
 
-var invert_selection = s:inverse
+var invert_selection = inverse
 if exists('g:gruvbox_invert_selection')
   if g:gruvbox_invert_selection == 0
     var invert_selection = ''
@@ -352,11 +352,11 @@ endif
 var invert_tabline = ''
 if exists('g:gruvbox_invert_tabline')
   if g:gruvbox_invert_tabline == 1
-    var invert_tabline = s:inverse
+    var invert_tabline = inverse
   endif
 endif
 
-var italicize_comments = s:italic
+var italicize_comments = italic
 if exists('g:gruvbox_italicize_comments')
   if g:gruvbox_italicize_comments == 0
     var italicize_comments = ''
@@ -366,14 +366,14 @@ endif
 var italicize_strings = ''
 if exists('g:gruvbox_italicize_strings')
   if g:gruvbox_italicize_strings == 1
-    var italicize_strings = s:italic
+    var italicize_strings = italic
   endif
 endif
 
 # }}}
 # Highlighting Function: {{{
 
-def s:HL(group, fg, ...)
+def HL(group, fg, ...)
   # Arguments: group, guifg, guibg, gui, guisp
 
   # foreground
@@ -383,7 +383,7 @@ def s:HL(group, fg, ...)
   if a:0 >= 1
     var bg = a:1
   else
-    var bg = s:none
+    var bg = none
   endif
 
   # emphasis
@@ -423,40 +423,40 @@ endfunction
 # Gruvbox Hi Groups: {{{
 
 # memoize common hi groups
-s:HL('GruvboxFg0', s:fg0)
-s:HL('GruvboxFg1', s:fg1)
-s:HL('GruvboxFg2', s:fg2)
-s:HL('GruvboxFg3', s:fg3)
-s:HL('GruvboxFg4', s:fg4)
-s:HL('GruvboxGray', s:gray)
-s:HL('GruvboxBg0', s:bg0)
-s:HL('GruvboxBg1', s:bg1)
-s:HL('GruvboxBg2', s:bg2)
-s:HL('GruvboxBg3', s:bg3)
-s:HL('GruvboxBg4', s:bg4)
+s:HL('GruvboxFg0', fg0)
+s:HL('GruvboxFg1', fg1)
+s:HL('GruvboxFg2', fg2)
+s:HL('GruvboxFg3', fg3)
+s:HL('GruvboxFg4', fg4)
+s:HL('GruvboxGray', gray)
+s:HL('GruvboxBg0', bg0)
+s:HL('GruvboxBg1', bg1)
+s:HL('GruvboxBg2', bg2)
+s:HL('GruvboxBg3', bg3)
+s:HL('GruvboxBg4', bg4)
 
-s:HL('GruvboxRed', s:red)
-s:HL('GruvboxRedBold', s:red, s:none, s:bold)
-s:HL('GruvboxGreen', s:green)
-s:HL('GruvboxGreenBold', s:green, s:none, s:bold)
-s:HL('GruvboxYellow', s:yellow)
-s:HL('GruvboxYellowBold', s:yellow, s:none, s:bold)
-s:HL('GruvboxBlue', s:blue)
-s:HL('GruvboxBlueBold', s:blue, s:none, s:bold)
-s:HL('GruvboxPurple', s:purple)
-s:HL('GruvboxPurpleBold', s:purple, s:none, s:bold)
-s:HL('GruvboxAqua', s:aqua)
-s:HL('GruvboxAquaBold', s:aqua, s:none, s:bold)
-s:HL('GruvboxOrange', s:orange)
-s:HL('GruvboxOrangeBold', s:orange, s:none, s:bold)
+s:HL('GruvboxRed', red)
+s:HL('GruvboxRedBold', red, none, bold)
+s:HL('GruvboxGreen', green)
+s:HL('GruvboxGreenBold', green, none, bold)
+s:HL('GruvboxYellow', yellow)
+s:HL('GruvboxYellowBold', yellow, none, bold)
+s:HL('GruvboxBlue', blue)
+s:HL('GruvboxBlueBold', blue, none, bold)
+s:HL('GruvboxPurple', purple)
+s:HL('GruvboxPurpleBold', purple, none, bold)
+s:HL('GruvboxAqua', aqua)
+s:HL('GruvboxAquaBold', aqua, none, bold)
+s:HL('GruvboxOrange', orange)
+s:HL('GruvboxOrangeBold', orange, none, bold)
 
-s:HL('GruvboxRedSign', s:red, s:sign_column, s:invert_signs)
-s:HL('GruvboxGreenSign', s:green, s:sign_column, s:invert_signs)
-s:HL('GruvboxYellowSign', s:yellow, s:sign_column, s:invert_signs)
-s:HL('GruvboxBlueSign', s:blue, s:sign_column, s:invert_signs)
-s:HL('GruvboxPurpleSign', s:purple, s:sign_column, s:invert_signs)
-s:HL('GruvboxAquaSign', s:aqua, s:sign_column, s:invert_signs)
-s:HL('GruvboxOrangeSign', s:orange, s:sign_column, s:invert_signs)
+s:HL('GruvboxRedSign', red, sign_column, invert_signs)
+s:HL('GruvboxGreenSign', green, sign_column, invert_signs)
+s:HL('GruvboxYellowSign', yellow, sign_column, invert_signs)
+s:HL('GruvboxBlueSign', blue, sign_column, invert_signs)
+s:HL('GruvboxPurpleSign', purple, sign_column, invert_signs)
+s:HL('GruvboxAquaSign', aqua, sign_column, invert_signs)
+s:HL('GruvboxOrangeSign', orange, sign_column, invert_signs)
 
 # }}}
 
@@ -464,7 +464,7 @@ s:HL('GruvboxOrangeSign', s:orange, s:sign_column, s:invert_signs)
 # General UI: {{{
 
 # Normal text
-s:HL('Normal', s:fg1, s:bg0)
+s:HL('Normal', fg1, bg0)
 
 # Correct background (see issue #7):
 # --- Problem with changing between dark and light on 256 color terminal
@@ -477,51 +477,51 @@ endif
 
 if version >= 700
   # Screen line that the cursor is
-s:HL('CursorLine',   s:none, s:bg1)
+s:HL('CursorLine',   none, bg1)
   # Screen column that the cursor is
   hi! link CursorColumn CursorLine
 
   # Tab pages line filler
-s:HL('TabLineFill', s:bg4, s:bg1, s:invert_tabline)
+s:HL('TabLineFill', bg4, bg1, invert_tabline)
   # Active tab page label
-s:HL('TabLineSel', s:green, s:bg1, s:invert_tabline)
+s:HL('TabLineSel', green, bg1, invert_tabline)
   # Not active tab page label
   hi! link TabLine TabLineFill
 
   # Match paired bracket under the cursor
-s:HL('MatchParen', s:none, s:bg3, s:bold)
+s:HL('MatchParen', none, bg3, bold)
 endif
 
 if version >= 703
   # Highlighted screen columns
-s:HL('ColorColumn',  s:none, s:color_column)
+s:HL('ColorColumn',  none, color_column)
 
   # Concealed element: \lambda → λ
-s:HL('Conceal', s:blue, s:none)
+s:HL('Conceal', blue, none)
 
   # Line number of CursorLine
-s:HL('CursorLineNr', s:yellow, s:bg1)
+s:HL('CursorLineNr', yellow, bg1)
 endif
 
 hi! link NonText GruvboxBg2
 hi! link SpecialKey GruvboxBg2
 
-s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
+s:HL('Visual',    none,  bg3, invert_selection)
 hi! link VisualNOS Visual
 
-s:HL('Search',    s:yellow, s:bg0, s:inverse)
-s:HL('IncSearch', s:hls_cursor, s:bg0, s:inverse)
+s:HL('Search',    yellow, bg0, inverse)
+s:HL('IncSearch', hls_cursor, bg0, inverse)
 
-s:HL('Underlined', s:blue, s:none, s:underline)
+s:HL('Underlined', blue, none, underline)
 
-s:HL('StatusLine',   s:bg2, s:fg1, s:inverse)
-s:HL('StatusLineNC', s:bg1, s:fg4, s:inverse)
+s:HL('StatusLine',   bg2, fg1, inverse)
+s:HL('StatusLineNC', bg1, fg4, inverse)
 
 # The column separating vertically split windows
-s:HL('VertSplit', s:bg3, s:vert_split)
+s:HL('VertSplit', bg3, vert_split)
 
 # Current match in wildmenu compvarion
-s:HL('WildMenu', s:blue, s:bg2, s:bold)
+s:HL('WildMenu', blue, bg2, bold)
 
 # Directory names, special names in listing
 hi! link Directory GruvboxGreenBold
@@ -530,7 +530,7 @@ hi! link Directory GruvboxGreenBold
 hi! link Title GruvboxGreenBold
 
 # Error messages on the command line
-s:HL('ErrorMsg',   s:bg0, s:red, s:bold)
+s:HL('ErrorMsg',   bg0, red, bold)
 # More prompt: -- More --
 hi! link MoreMsg GruvboxYellowBold
 # Current mode message: -- INSERT --
@@ -544,21 +544,21 @@ hi! link WarningMsg GruvboxRedBold
 # Gutter: {{{
 
 # Line number for :number and :# commands
-s:HL('LineNr', s:bg4, s:number_column)
+s:HL('LineNr', bg4, number_column)
 
 # Column where signs are displayed
-s:HL('SignColumn', s:none, s:sign_column)
+s:HL('SignColumn', none, sign_column)
 
 # Line used for closed folds
-s:HL('Folded', s:gray, s:bg1, s:italic)
+s:HL('Folded', gray, bg1, italic)
 # Column where folds are displayed
-s:HL('FoldColumn', s:gray, s:bg1)
+s:HL('FoldColumn', gray, bg1)
 
 # }}}
 # Cursor: {{{
 
 # Character under cursor
-s:HL('Cursor', s:none, s:none, s:inverse)
+s:HL('Cursor', none, none, inverse)
 # Visual mode cursor, selection
 hi! link vCursor Cursor
 # Input moder cursor
@@ -572,12 +572,12 @@ hi! link lCursor Cursor
 if g:gruvbox_improved_strings == 0
   hi! link Special GruvboxOrange
 else
-s:HL('Special', s:orange, s:bg1, s:italicize_strings)
+s:HL('Special', orange, bg1, italicize_strings)
 endif
 
-s:HL('Comment', s:gray, s:none, s:italicize_comments)
-s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
-s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
+s:HL('Comment', gray, none, italicize_comments)
+s:HL('Todo', vim_fg, vim_bg, bold . s:italic)
+s:HL('Error', red, vim_bg, bold . s:inverse)
 
 # Generic statement
 hi! link Statement GruvboxRed
@@ -616,9 +616,9 @@ hi! link Constant GruvboxPurple
 hi! link Character GruvboxPurple
 # String constant: "this is a string"
 if g:gruvbox_improved_strings == 0
-s:HL('String',  s:green, s:none, s:italicize_strings)
+s:HL('String',  green, none, italicize_strings)
 else
-s:HL('String',  s:fg1, s:bg1, s:italicize_strings)
+s:HL('String',  fg1, bg1, italicize_strings)
 endif
 # Boolean constant: TRUE, false
 hi! link Boolean GruvboxPurple
@@ -641,26 +641,26 @@ hi! link Typedef GruvboxYellow
 
 if version >= 700
   # Popup menu: normal item
-s:HL('Pmenu', s:fg1, s:bg2)
+s:HL('Pmenu', fg1, bg2)
   # Popup menu: selected item
-s:HL('PmenuSel', s:bg2, s:blue, s:bold)
+s:HL('PmenuSel', bg2, blue, bold)
   # Popup menu: scrollbar
-s:HL('PmenuSbar', s:none, s:bg2)
+s:HL('PmenuSbar', none, bg2)
   # Popup menu: scrollbar thumb
-s:HL('PmenuThumb', s:none, s:bg4)
+s:HL('PmenuThumb', none, bg4)
 endif
 
 # }}}
 # Diffs: {{{
 
-s:HL('DiffDevare', s:red, s:bg0, s:inverse)
-s:HL('DiffAdd',    s:green, s:bg0, s:inverse)
-#s:HL('DiffChange', s:bg0, s:blue)
-#s:HL('DiffText',   s:bg0, s:yellow)
+s:HL('DiffDevare', red, bg0, inverse)
+s:HL('DiffAdd',    green, bg0, inverse)
+#s:HL('DiffChange', bg0, blue)
+#s:HL('DiffText',   bg0, yellow)
 
 # Alternative setting
-s:HL('DiffChange', s:aqua, s:bg0, s:inverse)
-s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
+s:HL('DiffChange', aqua, bg0, inverse)
+s:HL('DiffText',   yellow, bg0, inverse)
 
 # }}}
 # Spelling: {{{
@@ -668,16 +668,16 @@ s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
 if has("spell")
   # Not capitalised word, or compile warnings
   if g:gruvbox_improved_warnings == 0
-s:HL('SpellCap',   s:none, s:none, s:undercurl, s:red)
+s:HL('SpellCap',   none, none, undercurl, red)
   else
-s:HL('SpellCap',   s:green, s:none, s:bold . s:italic)
+s:HL('SpellCap',   green, none, bold . s:italic)
   endif
   # Not recognized word
-s:HL('SpellBad',   s:none, s:none, s:undercurl, s:blue)
+s:HL('SpellBad',   none, none, undercurl, blue)
   # Wrong spelling for selected region
-s:HL('SpellLocal', s:none, s:none, s:undercurl, s:aqua)
+s:HL('SpellLocal', none, none, undercurl, aqua)
   # Rare word
-s:HL('SpellRare',  s:none, s:none, s:undercurl, s:purple)
+s:HL('SpellRare',  none, none, undercurl, purple)
 endif
 
 # }}}
@@ -703,11 +703,11 @@ endif
 
 if g:indent_guides_auto_colors == 0
   if g:gruvbox_invert_indent_guides == 0
-s:HL('IndentGuidesOdd', s:vim_bg, s:bg2)
-s:HL('IndentGuidesEven', s:vim_bg, s:bg1)
+s:HL('IndentGuidesOdd', vim_bg, bg2)
+s:HL('IndentGuidesEven', vim_bg, bg1)
   else
-s:HL('IndentGuidesOdd', s:vim_bg, s:bg2, s:inverse)
-s:HL('IndentGuidesEven', s:vim_bg, s:bg3, s:inverse)
+s:HL('IndentGuidesOdd', vim_bg, bg2, inverse)
+s:HL('IndentGuidesEven', vim_bg, bg3, inverse)
   endif
 endif
 
@@ -715,10 +715,10 @@ endif
 # IndentLine: {{{
 
 if !exists('g:indentLine_color_term')
-  g:indentLine_color_term = s:bg2[1]
+  g:indentLine_color_term = bg2[1]
 endif
 if !exists('g:indentLine_color_gui')
-  g:indentLine_color_gui = s:bg2[0]
+  g:indentLine_color_gui = bg2[0]
 endif
 
 # }}}
@@ -772,8 +772,8 @@ hi! link SignifySignDevare GruvboxRedSign
 # }}}
 # Syntastic: {{{
 
-s:HL('SyntasticError', s:none, s:none, s:undercurl, s:red)
-s:HL('SyntasticWarning', s:none, s:none, s:undercurl, s:yellow)
+s:HL('SyntasticError', none, none, undercurl, red)
+s:HL('SyntasticWarning', none, none, undercurl, yellow)
 
 hi! link SyntasticErrorSign GruvboxRedSign
 hi! link SyntasticWarningSign GruvboxYellowSign
@@ -800,9 +800,9 @@ hi! link CtrlPPrtBase GruvboxBg2
 hi! link CtrlPPrtCursor GruvboxBlue
 hi! link CtrlPLinePre GruvboxBg2
 
-s:HL('CtrlPMode1', s:blue, s:bg2, s:bold)
-s:HL('CtrlPMode2', s:bg0, s:blue, s:bold)
-s:HL('CtrlPStats', s:fg4, s:bg2, s:bold)
+s:HL('CtrlPMode1', blue, bg2, bold)
+s:HL('CtrlPMode2', bg0, blue, bold)
+s:HL('CtrlPStats', fg4, bg2, bold)
 
 # }}}
 # Startify: {{{
@@ -821,26 +821,26 @@ hi! link StartifyFooter GruvboxBg2
 # Vimshell: {{{
 
 g:vimshell_escape_colors = [
-  \ s:bg4[0], s:red[0], s:green[0], s:yellow[0],
-  \ s:blue[0], s:purple[0], s:aqua[0], s:fg4[0],
-  \ s:bg0[0], s:red[0], s:green[0], s:orange[0],
-  \ s:blue[0], s:purple[0], s:aqua[0], s:fg0[0]
+  \ bg4[0], red[0], green[0], yellow[0],
+  \ blue[0], purple[0], aqua[0], fg4[0],
+  \ bg0[0], red[0], green[0], orange[0],
+  \ blue[0], purple[0], aqua[0], fg0[0]
   \ ]
 
 # }}}
 # BufTabLine: {{{
 
-s:HL('BufTabLineCurrent', s:bg0, s:fg4)
-s:HL('BufTabLineActive', s:fg4, s:bg2)
-s:HL('BufTabLineHidden', s:bg4, s:bg1)
-s:HL('BufTabLineFill', s:bg0, s:bg0)
+s:HL('BufTabLineCurrent', bg0, fg4)
+s:HL('BufTabLineActive', fg4, bg2)
+s:HL('BufTabLineHidden', bg4, bg1)
+s:HL('BufTabLineFill', bg0, bg0)
 
 # }}}
 # Asynchronous Lint Engine: {{{
 
-s:HL('ALEError', s:none, s:none, s:undercurl, s:red)
-s:HL('ALEWarning', s:none, s:none, s:undercurl, s:yellow)
-s:HL('ALEInfo', s:none, s:none, s:undercurl, s:blue)
+s:HL('ALEError', none, none, undercurl, red)
+s:HL('ALEWarning', none, none, undercurl, yellow)
+s:HL('ALEInfo', none, none, undercurl, blue)
 
 hi! link ALEErrorSign GruvboxRedSign
 hi! link ALEWarningSign GruvboxYellowSign
@@ -888,8 +888,8 @@ hi! link NERDTreeToggleOff GruvboxRed
 # }}}
 # Vim Multiple Cursors: {{{
 
-s:HL('multiple_cursors_cursor', s:none, s:none, s:inverse)
-s:HL('multiple_cursors_visual', s:none, s:bg2)
+s:HL('multiple_cursors_cursor', none, none, inverse)
+s:HL('multiple_cursors_visual', none, bg2)
 
 # }}}
 # coc.nvim: {{{
@@ -910,10 +910,10 @@ hi! link CocDiagnosticsHint GruvboxBlue
 hi! link CocSelectedText GruvboxRed
 hi! link CocCodeLens GruvboxGray
 
-s:HL('CocErrorHighlight', s:none, s:none, s:undercurl, s:red)
-s:HL('CocWarningHighlight', s:none, s:none, s:undercurl, s:orange)
-s:HL('CocInfoHighlight', s:none, s:none, s:undercurl, s:yellow)
-s:HL('CocHintHighlight', s:none, s:none, s:undercurl, s:blue)
+s:HL('CocErrorHighlight', none, none, undercurl, red)
+s:HL('CocWarningHighlight', none, none, undercurl, orange)
+s:HL('CocInfoHighlight', none, none, undercurl, yellow)
+s:HL('CocHintHighlight', none, none, undercurl, blue)
 
 # }}}
 
@@ -942,18 +942,18 @@ hi! link htmlScriptTag GruvboxPurple
 hi! link htmlTagN GruvboxFg1
 hi! link htmlSpecialTagName GruvboxAquaBold
 
-s:HL('htmlLink', s:fg4, s:none, s:underline)
+s:HL('htmlLink', fg4, none, underline)
 
 hi! link htmlSpecialChar GruvboxOrange
 
-s:HL('htmlBold', s:vim_fg, s:vim_bg, s:bold)
-s:HL('htmlBoldUnderline', s:vim_fg, s:vim_bg, s:bold . s:underline)
-s:HL('htmlBoldItalic', s:vim_fg, s:vim_bg, s:bold . s:italic)
-s:HL('htmlBoldUnderlineItalic', s:vim_fg, s:vim_bg, s:bold . s:underline . s:italic)
+s:HL('htmlBold', vim_fg, vim_bg, bold)
+s:HL('htmlBoldUnderline', vim_fg, vim_bg, bold . s:underline)
+s:HL('htmlBoldItalic', vim_fg, vim_bg, bold . s:italic)
+s:HL('htmlBoldUnderlineItalic', vim_fg, vim_bg, bold . s:underline . s:italic)
 
-s:HL('htmlUnderline', s:vim_fg, s:vim_bg, s:underline)
-s:HL('htmlUnderlineItalic', s:vim_fg, s:vim_bg, s:underline . s:italic)
-s:HL('htmlItalic', s:vim_fg, s:vim_bg, s:italic)
+s:HL('htmlUnderline', vim_fg, vim_bg, underline)
+s:HL('htmlUnderlineItalic', vim_fg, vim_bg, underline . s:italic)
+s:HL('htmlItalic', vim_fg, vim_bg, italic)
 
 # }}}
 # Xml: {{{
@@ -982,7 +982,7 @@ hi! link xmlEntityPunct GruvboxOrange
 # }}}
 # Vim: {{{
 
-s:HL('vimCommentTitle', s:fg4_256, s:none, s:bold . s:italicize_comments)
+s:HL('vimCommentTitle', fg4_256, none, bold . s:italicize_comments)
 
 hi! link vimNotation GruvboxOrange
 hi! link vimBracket GruvboxOrange
@@ -1008,7 +1008,7 @@ hi! link clojureException GruvboxRed
 
 hi! link clojureRegexp GruvboxAqua
 hi! link clojureRegexpEscape GruvboxAqua
-s:HL('clojureRegexpCharClass', s:fg3, s:none, s:bold)
+s:HL('clojureRegexpCharClass', fg3, none, bold)
 hi! link clojureRegexpMod clojureRegexpCharClass
 hi! link clojureRegexpQuantifier clojureRegexpCharClass
 
@@ -1330,7 +1330,7 @@ hi! link scalaInterpolation GruvboxAqua
 # }}}
 # Markdown: {{{
 
-s:HL('markdownItalic', s:fg3, s:none, s:italic)
+s:HL('markdownItalic', fg3, none, italic)
 
 hi! link markdownH1 GruvboxGreenBold
 hi! link markdownH2 GruvboxGreenBold
@@ -1357,7 +1357,7 @@ hi! link markdownHeadingDelimiter GruvboxOrange
 hi! link markdownUrl GruvboxPurple
 hi! link markdownUrlTitleDelimiter GruvboxGreen
 
-s:HL('markdownLinkText', s:gray, s:none, s:underline)
+s:HL('markdownLinkText', gray, none, underline)
 hi! link markdownIdDeclaration markdownLinkText
 
 # }}}
@@ -1409,11 +1409,11 @@ hi! link jsonString GruvboxFg1
 # Search Highlighting Cursor {{{
 
 def GruvboxHlsShowCursor()
-s:HL('Cursor', s:bg0, s:hls_cursor)
+s:HL('Cursor', bg0, hls_cursor)
 enddef
 
 def GruvboxHlsHideCursor()
-s:HL('Cursor', s:none, s:none, s:inverse)
+s:HL('Cursor', none, none, inverse)
 enddef
 
 # }}}
