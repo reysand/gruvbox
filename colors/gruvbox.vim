@@ -88,7 +88,7 @@ var is_dark = (&background == 'dark')
 var gb = {}
 
 # fill it with absolute colors
-var gb.dark0_hard  = ['#1d2021', 234]     # 29-32-33
+gb.dark0_hard  = ['#1d2021', 234]     # 29-32-33
 var gb.dark0       = ['#282828', 235]     # 40-40-40
 var gb.dark0_soft  = ['#32302f', 236]     # 50-48-47
 var gb.dark1       = ['#3c3836', 237]     # 60-56-54
