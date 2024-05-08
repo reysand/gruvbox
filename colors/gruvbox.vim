@@ -18,7 +18,7 @@ if v:version > 580
   endif
 endif
 
-g:colors_name='gruvbox'
+g:colors_name = 'gruvbox'
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
@@ -28,43 +28,43 @@ endif
 # Global Settings: {{{
 
 if !exists('g:gruvbox_bold')
-  g:gruvbox_bold=1
+  g:gruvbox_bold = 1
 endif
 if !exists('g:gruvbox_italic')
   if has('gui_running') || $TERM_ITALICS == 'true'
-    g:gruvbox_italic=1
+    g:gruvbox_italic = 1
   else
-    g:gruvbox_italic=0
+    g:gruvbox_italic = 0
   endif
 endif
 if !exists('g:gruvbox_undercurl')
-  g:gruvbox_undercurl=1
+  g:gruvbox_undercurl = 1
 endif
 if !exists('g:gruvbox_underline')
-  g:gruvbox_underline=1
+  g:gruvbox_underline = 1
 endif
 if !exists('g:gruvbox_inverse')
-  g:gruvbox_inverse=1
+  g:gruvbox_inverse = 1
 endif
 
 if !exists('g:gruvbox_guisp_fallback') || index(['fg', 'bg'], g:gruvbox_guisp_fallback) == -1
-  g:gruvbox_guisp_fallback='NONE'
+  g:gruvbox_guisp_fallback = 'NONE'
 endif
 
 if !exists('g:gruvbox_improved_strings')
-  g:gruvbox_improved_strings=0
+  g:gruvbox_improved_strings = 0
 endif
 
 if !exists('g:gruvbox_improved_warnings')
-  g:gruvbox_improved_warnings=0
+  g:gruvbox_improved_warnings = 0
 endif
 
 if !exists('g:gruvbox_termcolors')
-  g:gruvbox_termcolors=256
+  g:gruvbox_termcolors = 256
 endif
 
 if !exists('g:gruvbox_invert_indent_guides')
-  g:gruvbox_invert_indent_guides=0
+  g:gruvbox_invert_indent_guides = 0
 endif
 
 if exists('g:gruvbox_contrast')
@@ -72,11 +72,11 @@ if exists('g:gruvbox_contrast')
 endif
 
 if !exists('g:gruvbox_contrast_dark')
-  g:gruvbox_contrast_dark='medium'
+  g:gruvbox_contrast_dark = 'medium'
 endif
 
 if !exists('g:gruvbox_contrast_light')
-  g:gruvbox_contrast_light='medium'
+  g:gruvbox_contrast_light = 'medium'
 endif
 
 var s:is_dark=(&background == 'dark')
