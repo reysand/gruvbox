@@ -79,196 +79,196 @@ if !exists('g:gruvbox_contrast_light')
   g:gruvbox_contrast_light = 'medium'
 endif
 
-var s:is_dark=(&background == 'dark')
+var is_dark = (&background == 'dark')
 
 # }}}
 # Pavarte: {{{
 
 # setup pavarte dictionary
-var s:gb = {}
+var gb = {}
 
 # fill it with absolute colors
-var s:gb.dark0_hard  = ['#1d2021', 234]     # 29-32-33
-var s:gb.dark0       = ['#282828', 235]     # 40-40-40
-var s:gb.dark0_soft  = ['#32302f', 236]     # 50-48-47
-var s:gb.dark1       = ['#3c3836', 237]     # 60-56-54
-var s:gb.dark2       = ['#504945', 239]     # 80-73-69
-var s:gb.dark3       = ['#665c54', 241]     # 102-92-84
-var s:gb.dark4       = ['#7c6f64', 243]     # 124-111-100
-var s:gb.dark4_256   = ['#7c6f64', 243]     # 124-111-100
+var gb.dark0_hard  = ['#1d2021', 234]     # 29-32-33
+var gb.dark0       = ['#282828', 235]     # 40-40-40
+var gb.dark0_soft  = ['#32302f', 236]     # 50-48-47
+var gb.dark1       = ['#3c3836', 237]     # 60-56-54
+var gb.dark2       = ['#504945', 239]     # 80-73-69
+var gb.dark3       = ['#665c54', 241]     # 102-92-84
+var gb.dark4       = ['#7c6f64', 243]     # 124-111-100
+var gb.dark4_256   = ['#7c6f64', 243]     # 124-111-100
 
-var s:gb.gray_245    = ['#928374', 245]     # 146-131-116
-var s:gb.gray_244    = ['#928374', 244]     # 146-131-116
+var gb.gray_245    = ['#928374', 245]     # 146-131-116
+var gb.gray_244    = ['#928374', 244]     # 146-131-116
 
-var s:gb.light0_hard = ['#f9f5d7', 230]     # 249-245-215
-var s:gb.light0      = ['#fbf1c7', 229]     # 253-244-193
-var s:gb.light0_soft = ['#f2e5bc', 228]     # 242-229-188
-var s:gb.light1      = ['#ebdbb2', 223]     # 235-219-178
-var s:gb.light2      = ['#d5c4a1', 250]     # 213-196-161
-var s:gb.light3      = ['#bdae93', 248]     # 189-174-147
-var s:gb.light4      = ['#a89984', 246]     # 168-153-132
-var s:gb.light4_256  = ['#a89984', 246]     # 168-153-132
+var gb.light0_hard = ['#f9f5d7', 230]     # 249-245-215
+var gb.light0      = ['#fbf1c7', 229]     # 253-244-193
+var gb.light0_soft = ['#f2e5bc', 228]     # 242-229-188
+var gb.light1      = ['#ebdbb2', 223]     # 235-219-178
+var gb.light2      = ['#d5c4a1', 250]     # 213-196-161
+var gb.light3      = ['#bdae93', 248]     # 189-174-147
+var gb.light4      = ['#a89984', 246]     # 168-153-132
+var gb.light4_256  = ['#a89984', 246]     # 168-153-132
 
-var s:gb.bright_red     = ['#fb4934', 167]     # 251-73-52
-var s:gb.bright_green   = ['#b8bb26', 142]     # 184-187-38
-var s:gb.bright_yellow  = ['#fabd2f', 214]     # 250-189-47
-var s:gb.bright_blue    = ['#83a598', 109]     # 131-165-152
-var s:gb.bright_purple  = ['#d3869b', 175]     # 211-134-155
-var s:gb.bright_aqua    = ['#8ec07c', 108]     # 142-192-124
-var s:gb.bright_orange  = ['#fe8019', 208]     # 254-128-25
+var gb.bright_red     = ['#fb4934', 167]     # 251-73-52
+var gb.bright_green   = ['#b8bb26', 142]     # 184-187-38
+var gb.bright_yellow  = ['#fabd2f', 214]     # 250-189-47
+var gb.bright_blue    = ['#83a598', 109]     # 131-165-152
+var gb.bright_purple  = ['#d3869b', 175]     # 211-134-155
+var gb.bright_aqua    = ['#8ec07c', 108]     # 142-192-124
+var gb.bright_orange  = ['#fe8019', 208]     # 254-128-25
 
-var s:gb.neutral_red    = ['#cc241d', 124]     # 204-36-29
-var s:gb.neutral_green  = ['#98971a', 106]     # 152-151-26
-var s:gb.neutral_yellow = ['#d79921', 172]     # 215-153-33
-var s:gb.neutral_blue   = ['#458588', 66]      # 69-133-136
-var s:gb.neutral_purple = ['#b16286', 132]     # 177-98-134
-var s:gb.neutral_aqua   = ['#689d6a', 72]      # 104-157-106
-var s:gb.neutral_orange = ['#d65d0e', 166]     # 214-93-14
+var gb.neutral_red    = ['#cc241d', 124]     # 204-36-29
+var gb.neutral_green  = ['#98971a', 106]     # 152-151-26
+var gb.neutral_yellow = ['#d79921', 172]     # 215-153-33
+var gb.neutral_blue   = ['#458588', 66]      # 69-133-136
+var gb.neutral_purple = ['#b16286', 132]     # 177-98-134
+var gb.neutral_aqua   = ['#689d6a', 72]      # 104-157-106
+var gb.neutral_orange = ['#d65d0e', 166]     # 214-93-14
 
-var s:gb.faded_red      = ['#9d0006', 88]      # 157-0-6
-var s:gb.faded_green    = ['#79740e', 100]     # 121-116-14
-var s:gb.faded_yellow   = ['#b57614', 136]     # 181-118-20
-var s:gb.faded_blue     = ['#076678', 24]      # 7-102-120
-var s:gb.faded_purple   = ['#8f3f71', 96]      # 143-63-113
-var s:gb.faded_aqua     = ['#427b58', 66]      # 66-123-88
-var s:gb.faded_orange   = ['#af3a03', 130]     # 175-58-3
+var gb.faded_red      = ['#9d0006', 88]      # 157-0-6
+var gb.faded_green    = ['#79740e', 100]     # 121-116-14
+var gb.faded_yellow   = ['#b57614', 136]     # 181-118-20
+var gb.faded_blue     = ['#076678', 24]      # 7-102-120
+var gb.faded_purple   = ['#8f3f71', 96]      # 143-63-113
+var gb.faded_aqua     = ['#427b58', 66]      # 66-123-88
+var gb.faded_orange   = ['#af3a03', 130]     # 175-58-3
 
 # }}}
 # Setup Emphasis: {{{
 
-var s:bold = 'bold,'
+var bold = 'bold,'
 if g:gruvbox_bold == 0
-  var s:bold = ''
+  var bold = ''
 endif
 
-var s:italic = 'italic,'
+var italic = 'italic,'
 if g:gruvbox_italic == 0
-  var s:italic = ''
+  var italic = ''
 endif
 
-var s:underline = 'underline,'
+var underline = 'underline,'
 if g:gruvbox_underline == 0
-  var s:underline = ''
+  var underline = ''
 endif
 
-var s:undercurl = 'undercurl,'
+var undercurl = 'undercurl,'
 if g:gruvbox_undercurl == 0
-  var s:undercurl = ''
+  var undercurl = ''
 endif
 
-var s:inverse = 'inverse,'
+var inverse = 'inverse,'
 if g:gruvbox_inverse == 0
-  var s:inverse = ''
+  var inverse = ''
 endif
 
 # }}}
 # Setup Colors: {{{
 
-var s:vim_bg = ['bg', 'bg']
-var s:vim_fg = ['fg', 'fg']
-var s:none = ['NONE', 'NONE']
+var vim_bg = ['bg', 'bg']
+var vim_fg = ['fg', 'fg']
+var none = ['NONE', 'NONE']
 
 # determine relative colors
-if s:is_dark
-  var s:bg0  = s:gb.dark0
+if is_dark
+  var bg0  = s:gb.dark0
   if g:gruvbox_contrast_dark == 'soft'
-    var s:bg0  = s:gb.dark0_soft
+    var bg0  = s:gb.dark0_soft
   elseif g:gruvbox_contrast_dark == 'hard'
-    var s:bg0  = s:gb.dark0_hard
+    var bg0  = s:gb.dark0_hard
   endif
 
-  var s:bg1  = s:gb.dark1
-  var s:bg2  = s:gb.dark2
-  var s:bg3  = s:gb.dark3
-  var s:bg4  = s:gb.dark4
+  var bg1  = s:gb.dark1
+  var bg2  = s:gb.dark2
+  var bg3  = s:gb.dark3
+  var bg4  = s:gb.dark4
 
-  var s:gray = s:gb.gray_245
+  var gray = s:gb.gray_245
 
-  var s:fg0 = s:gb.light0
-  var s:fg1 = s:gb.light1
-  var s:fg2 = s:gb.light2
-  var s:fg3 = s:gb.light3
-  var s:fg4 = s:gb.light4
+  var fg0 = s:gb.light0
+  var fg1 = s:gb.light1
+  var fg2 = s:gb.light2
+  var fg3 = s:gb.light3
+  var fg4 = s:gb.light4
 
-  var s:fg4_256 = s:gb.light4_256
+  var fg4_256 = s:gb.light4_256
 
-  var s:red    = s:gb.bright_red
-  var s:green  = s:gb.bright_green
-  var s:yellow = s:gb.bright_yellow
-  var s:blue   = s:gb.bright_blue
-  var s:purple = s:gb.bright_purple
-  var s:aqua   = s:gb.bright_aqua
-  var s:orange = s:gb.bright_orange
+  var red    = s:gb.bright_red
+  var green  = s:gb.bright_green
+  var yellow = s:gb.bright_yellow
+  var blue   = s:gb.bright_blue
+  var purple = s:gb.bright_purple
+  var aqua   = s:gb.bright_aqua
+  var orange = s:gb.bright_orange
 else
-  var s:bg0  = s:gb.light0
+  var bg0  = s:gb.light0
   if g:gruvbox_contrast_light == 'soft'
-    var s:bg0  = s:gb.light0_soft
+    var bg0  = s:gb.light0_soft
   elseif g:gruvbox_contrast_light == 'hard'
-    var s:bg0  = s:gb.light0_hard
+    var bg0  = s:gb.light0_hard
   endif
 
-  var s:bg1  = s:gb.light1
-  var s:bg2  = s:gb.light2
-  var s:bg3  = s:gb.light3
-  var s:bg4  = s:gb.light4
+  var bg1  = s:gb.light1
+  var bg2  = s:gb.light2
+  var bg3  = s:gb.light3
+  var bg4  = s:gb.light4
 
-  var s:gray = s:gb.gray_244
+  var gray = s:gb.gray_244
 
-  var s:fg0 = s:gb.dark0
-  var s:fg1 = s:gb.dark1
-  var s:fg2 = s:gb.dark2
-  var s:fg3 = s:gb.dark3
-  var s:fg4 = s:gb.dark4
+  var fg0 = s:gb.dark0
+  var fg1 = s:gb.dark1
+  var fg2 = s:gb.dark2
+  var fg3 = s:gb.dark3
+  var fg4 = s:gb.dark4
 
-  var s:fg4_256 = s:gb.dark4_256
+  var fg4_256 = s:gb.dark4_256
 
-  var s:red    = s:gb.faded_red
-  var s:green  = s:gb.faded_green
-  var s:yellow = s:gb.faded_yellow
-  var s:blue   = s:gb.faded_blue
-  var s:purple = s:gb.faded_purple
-  var s:aqua   = s:gb.faded_aqua
-  var s:orange = s:gb.faded_orange
+  var red    = s:gb.faded_red
+  var green  = s:gb.faded_green
+  var yellow = s:gb.faded_yellow
+  var blue   = s:gb.faded_blue
+  var purple = s:gb.faded_purple
+  var aqua   = s:gb.faded_aqua
+  var orange = s:gb.faded_orange
 endif
 
 # reset to 16 colors fallback
 if g:gruvbox_termcolors == 16
-  var s:bg0[1]    = 0
-  var s:fg4[1]    = 7
-  var s:gray[1]   = 8
-  var s:red[1]    = 9
-  var s:green[1]  = 10
-  var s:yellow[1] = 11
-  var s:blue[1]   = 12
-  var s:purple[1] = 13
-  var s:aqua[1]   = 14
-  var s:fg1[1]    = 15
+  var bg0[1]    = 0
+  var fg4[1]    = 7
+  var gray[1]   = 8
+  var red[1]    = 9
+  var green[1]  = 10
+  var yellow[1] = 11
+  var blue[1]   = 12
+  var purple[1] = 13
+  var aqua[1]   = 14
+  var fg1[1]    = 15
 endif
 
 # save current relative colors back to pavarte dictionary
-var s:gb.bg0 = s:bg0
-var s:gb.bg1 = s:bg1
-var s:gb.bg2 = s:bg2
-var s:gb.bg3 = s:bg3
-var s:gb.bg4 = s:bg4
+var gb.bg0 = s:bg0
+var gb.bg1 = s:bg1
+var gb.bg2 = s:bg2
+var gb.bg3 = s:bg3
+var gb.bg4 = s:bg4
 
-var s:gb.gray = s:gray
+var gb.gray = s:gray
 
-var s:gb.fg0 = s:fg0
-var s:gb.fg1 = s:fg1
-var s:gb.fg2 = s:fg2
-var s:gb.fg3 = s:fg3
-var s:gb.fg4 = s:fg4
+var gb.fg0 = s:fg0
+var gb.fg1 = s:fg1
+var gb.fg2 = s:fg2
+var gb.fg3 = s:fg3
+var gb.fg4 = s:fg4
 
-var s:gb.fg4_256 = s:fg4_256
+var gb.fg4_256 = s:fg4_256
 
-var s:gb.red    = s:red
-var s:gb.green  = s:green
-var s:gb.yellow = s:yellow
-var s:gb.blue   = s:blue
-var s:gb.purple = s:purple
-var s:gb.aqua   = s:aqua
-var s:gb.orange = s:orange
+var gb.red    = s:red
+var gb.green  = s:green
+var gb.yellow = s:yellow
+var gb.blue   = s:blue
+var gb.purple = s:purple
+var gb.aqua   = s:aqua
+var gb.orange = s:orange
 
 # }}}
 # Setup Terminal Colors For Neovim: {{{
@@ -302,71 +302,71 @@ endif
 # }}}
 # Overload Setting: {{{
 
-var s:hls_cursor = s:orange
+var hls_cursor = s:orange
 if exists('g:gruvbox_hls_cursor')
-  var s:hls_cursor = get(s:gb, g:gruvbox_hls_cursor)
+  var hls_cursor = get(s:gb, g:gruvbox_hls_cursor)
 endif
 
-var s:number_column = s:none
+var number_column = s:none
 if exists('g:gruvbox_number_column')
-  var s:number_column = get(s:gb, g:gruvbox_number_column)
+  var number_column = get(s:gb, g:gruvbox_number_column)
 endif
 
-var s:sign_column = s:bg1
+var sign_column = s:bg1
 
 if exists('g:gitgutter_override_sign_column_highlight') &&
       \ g:gitgutter_override_sign_column_highlight == 1
-  var s:sign_column = s:number_column
+  var sign_column = s:number_column
 else
   g:gitgutter_override_sign_column_highlight = 0
 
   if exists('g:gruvbox_sign_column')
-    var s:sign_column = get(s:gb, g:gruvbox_sign_column)
+    var sign_column = get(s:gb, g:gruvbox_sign_column)
   endif
 endif
 
-var s:color_column = s:bg1
+var color_column = s:bg1
 if exists('g:gruvbox_color_column')
-  var s:color_column = get(s:gb, g:gruvbox_color_column)
+  var color_column = get(s:gb, g:gruvbox_color_column)
 endif
 
-var s:vert_split = s:bg0
+var vert_split = s:bg0
 if exists('g:gruvbox_vert_split')
-  var s:vert_split = get(s:gb, g:gruvbox_vert_split)
+  var vert_split = get(s:gb, g:gruvbox_vert_split)
 endif
 
-var s:invert_signs = ''
+var invert_signs = ''
 if exists('g:gruvbox_invert_signs')
   if g:gruvbox_invert_signs == 1
-    var s:invert_signs = s:inverse
+    var invert_signs = s:inverse
   endif
 endif
 
-var s:invert_selection = s:inverse
+var invert_selection = s:inverse
 if exists('g:gruvbox_invert_selection')
   if g:gruvbox_invert_selection == 0
-    var s:invert_selection = ''
+    var invert_selection = ''
   endif
 endif
 
-var s:invert_tabline = ''
+var invert_tabline = ''
 if exists('g:gruvbox_invert_tabline')
   if g:gruvbox_invert_tabline == 1
-    var s:invert_tabline = s:inverse
+    var invert_tabline = s:inverse
   endif
 endif
 
-var s:italicize_comments = s:italic
+var italicize_comments = s:italic
 if exists('g:gruvbox_italicize_comments')
   if g:gruvbox_italicize_comments == 0
-    var s:italicize_comments = ''
+    var italicize_comments = ''
   endif
 endif
 
-var s:italicize_strings = ''
+var italicize_strings = ''
 if exists('g:gruvbox_italicize_strings')
   if g:gruvbox_italicize_strings == 1
-    var s:italicize_strings = s:italic
+    var italicize_strings = s:italic
   endif
 endif
 
@@ -469,7 +469,7 @@ s:HL('Normal', s:fg1, s:bg0)
 # Correct background (see issue #7):
 # --- Problem with changing between dark and light on 256 color terminal
 # --- https://github.com/morhetz/gruvbox/issues/7
-if s:is_dark
+if is_dark
   set background=dark
 else
   set background=light
